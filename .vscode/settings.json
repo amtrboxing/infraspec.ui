@@ -7,5 +7,9 @@
     "source.fixAll.eslint": "explicit"
   },
   "editor.formatOnSave": true,
-  "eslint.workingDirectories": [".", "./ui"]
+  "eslint.workingDirectories": [
+    ".",
+    "./ui"
+  ],
+  "DockerRun.DisableDockerrc": true
 }
