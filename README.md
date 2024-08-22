@@ -435,7 +435,15 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Office Skid:
-Infraspec:iis/MIUtrailer123
-NVR:admin/MIUtrailer123
-Homebridge:iis/MIUtrailer123
+sudo mkdir data
+sudo chown -R 948:948 data
+
+services:
+  camera.ui:
+    container_name: camera.ui
+    image: amtrboxing/infraspec.ui
+    ports:
+     - "8081:8081"
+    volumes:
+      - ./data:/app/.camera.ui:rw
+
