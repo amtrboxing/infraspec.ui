@@ -67,12 +67,11 @@ export const permissionLevels = [
 
 export const defaultVideoProcess = ffmpegPath || 'ffmpeg';
 
-export const defaultHost = 'localhost';
-
 export const minNodeVersion = '16.12.0';
 
 export class ConfigSetup {
   constructor(config = {}) {
+    console.log(ffmpegPath);
     return {
       ...ConfigSetup.setupUi(config),
       options: ConfigSetup.setupOptions(config?.options),
@@ -95,8 +94,7 @@ export class ConfigSetup {
 
   static setupOptions(options = {}) {
     return {
-      videoProcessor: options?.vidteoProcessor || defaultVideoProcess,
-      host: options.host || defaultHost,
+      videoProcessor: options?.videoProcessor || defaultVideoProcess,
     };
   }
 

@@ -10,6 +10,5 @@
   "eslint.workingDirectories": [
     ".",
     "./ui"
-  ],
-  "DockerRun.DisableDockerrc": true
+  ]
 }
